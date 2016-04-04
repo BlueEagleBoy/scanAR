@@ -1,0 +1,10 @@
+framework module WikitudeNativeSDK {
+  umbrella header "WikitudeNativeSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module WikitudeNativeSDK.Swift {
+    header "WikitudeNativeSDK-Swift.h"
+}

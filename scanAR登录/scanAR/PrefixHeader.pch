@@ -1,0 +1,40 @@
+//
+//  PrefixHeader.pch
+//  LoginPage
+//
+//  Created by BlueEagleBoy on 16/3/7.
+//  Copyright © 2016年 BlueEagleBoy. All rights reserved.
+//
+
+
+#define kWTLicenseKey @"YkeT1T9oLISwxZtvheQXCntFpboXXXyh9FwPxDNE2XViNYnpACEWerWpkXrPLuMXqjm08e2HtXbGZwdxQTu4sBfZIy2ZV43xFBfqKMJ1mFdEA6BpDx3gkc9wRoT+rf8hHdDT+gmvuABfwLu9i1NLAjfnZYnLY4+WgAS7RrlAclxTYWx0ZWRfXyafeaIT+15ArZI7ZYqAoeYw523fLQ1KfGRFSQ0ZOAjHxVzOQK72VcZU8PQ7xjyLkR6g6SLsqzqBxOA8PkgcI1QBiSFVsjjc06wfwqLoTFtULoubBJ5CrXvfS4O9waBbEupaZi806RZQxj7bz6WqOC2n0GXTU8C++sVLt2rV9IhMFc9t3Qt3H4iXfNeFbuHpXtYl2dJnHYy33Lm7nXZmbbdM3bg1e6wtTd5Sr+Haj0wbzbPBaMw1qzFBro9ONs07W335qlPEKNRiaQ2vXp4tzGIbHhtmNgWMp5dL8Ee67wHsVPNmDu6386WH2zhNJnJctNby8TlVnfA+BLPtFczosBnxcEvi3P3Yzj1d237S0tchSSInJZRMLu11MVFjj9YmGtJ1pgT34dqMYi9FMgSDSVS/W5W3jzopTejC65Bkav3RlF2HHRZRWIpfmbrxwV71QcBk7RRP90+VYokeHNbi2ZSeWPYJJqNpDw4/OrFfeLurNbrI8D75I68="
+
+#define BLEScreenHeight [UIScreen mainScreen].bounds.size.height
+#define BLEScreenWidth [UIScreen mainScreen].bounds.size.width
+#define BLENavigationBarHeight self.navigationController.navigationBar.frame.size.height
+
+#define BLEPushEntityController @"push_entityController"
+
+//获取标题数据 服务器
+#define BLECategoryARUrlString @"http://user.sightp.com/mobile/ar-category"
+
+//获取Ar数据 服务器
+#define BLEARUrlString @"http://user.sightp.com/mobile/get-ar"
+
+
+//评论页
+#define BLEARINFOUrlString @"http://user.sightp.com/mobile/get-ar-info?id=117&lang=zh_cn"
+#define BLECommentUrlString @"http://user.sightp.com/mobile/get-ar-comment?id=117&page=1"
+
+
+
+#ifdef DEBUG
+
+#define DLog( s, ... ) NSLog( @"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+#else
+
+#define DLog(...)
+
+#endif
+
