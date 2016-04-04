@@ -54,12 +54,9 @@ typedef enum {
     
     //默认开始刷新
     [self.tableView.mj_header beginRefreshing];
-    
     //每次进入一个cell的时候默认从第一页开始加载
     self.currentPage = 1;
-    
     self.requestWay = BLERequestDataWayNormal;
-    
     [self reloadMoreDataWithCategory:index withPage:self.currentPage];
 }
 
@@ -98,10 +95,8 @@ typedef enum {
     [super loadView];
     
     [self.view addSubview:self.tableView];
-    
     //设置tableView的frame
-    self.tableView.frame = CGRectMake(0, 0, BLEScreenWidth, BLEScreenHeight - BLENavigationBarHeight - 80);
-    
+    self.tableView.frame = CGRectMake(0, 24, BLEScreenWidth, BLEScreenHeight - BLENavigationBarHeight-80);
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
@@ -110,21 +105,16 @@ typedef enum {
         
         self.currentPage++;
         self.requestWay = BLERequestDataWayDown;
-        
         [self reloadMoreDataWithCategory:self.index withPage:self.currentPage];
-        
     }];
     
     //设置tableView的表尾
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        
 //        [self reloadMoreDataWithCategory:self.index withPage:3];
-        
     }];
     
     //自动切换透明度
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
-
 }
 
 
@@ -150,7 +140,6 @@ typedef enum {
                 
                 NSLog(@"上拉加载");
             }
-            
             
             [self.entityModels addObjectsFromArray:responseTask];
             
@@ -185,7 +174,6 @@ typedef enum {
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-    
     //取出本地图片
     self.images = (NSMutableArray *)[self.tools readImagesFromFile];
 }

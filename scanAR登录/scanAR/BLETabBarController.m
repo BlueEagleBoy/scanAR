@@ -15,42 +15,48 @@
 #import "MJExtension.h"
 #import "BLETitleModel.h"
 #import "ViewController.h"
+#import "BLENavigationController.h"
 
 @interface BLETabBarController ()
 
-@property (nonatomic, strong)BLEFindController *findVc;
-@property (nonatomic, strong)ViewController *scanVc;
-@property (nonatomic, strong)BLEProfileController *profileVc;
+@property (nonatomic, strong)UINavigationController *findNav;
+@property (nonatomic, strong)UINavigationController *scanNav;
+@property (nonatomic, strong)UINavigationController *profileNav;
 
 @end
 
 @implementation BLETabBarController
 
-- (BLEFindController *)findVc {
+- (UINavigationController *)findNav {
     
-    if (!_findVc) {
+    if (!_findNav) {
         
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-        _findVc = [[BLEFindController alloc]initWithCollectionViewLayout:flowLayout];
+        BLEFindController *findVc = [[BLEFindController alloc]initWithCollectionViewLayout:flowLayout];
+        _findNav = [[UINavigationController alloc]initWithRootViewController:findVc];
     }
-    return _findVc;
+    return _findNav;
 }
 
-- (ViewController *)scanVc {
+- (UINavigationController *)scanNav {
     
-    if (!_scanVc) {
-        _scanVc = [[ViewController alloc]init];
+    if (!_scanNav) {
+       UIViewController *scanVc = [[ViewController alloc]init];
+        _scanNav = [[UINavigationController alloc]initWithRootViewController:scanVc];
     }
-    return _scanVc;
+    return _scanNav;
 }
 
-- (BLEProfileController *)profileVc {
+- (UINavigationController *)profileNav {
     
-    if (!_profileVc) {
-        _profileVc = [[UIStoryboard storyboardWithName:@"Profile" bundle:nil]instantiateInitialViewController];
+    
+    if (!_profileNav) {
+        UIViewController *profileVc = [[UIStoryboard storyboardWithName:@"Profile" bundle:nil]instantiateInitialViewController];
+        
+        _profileNav = [[UINavigationController alloc]initWithRootViewController:profileVc];
     }
     
-    return _profileVc;
+    return _profileNav;
 }
 
 
@@ -62,9 +68,10 @@
     
     self.navigationController.navigationBarHidden = NO;
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
-    [self addChildViewController:self.findVc];
-    [self addChildViewController:self.scanVc];
-    [self addChildViewController:self.profileVc];
+    
+    [self addChildViewController:self.findNav];
+    [self addChildViewController:self.scanNav];
+    [self addChildViewController:self.profileNav];
     
     self.selectedIndex = 0;
     
@@ -91,7 +98,6 @@
     NSDictionary *parameter = @{@"lang":@"zh_cn" };
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
     
     __weak typeof(self) weakSelf = self;
     [manager GET:BLECategoryARUrlString parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

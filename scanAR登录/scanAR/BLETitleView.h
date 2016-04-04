@@ -15,6 +15,8 @@ typedef void(^block)(NSInteger index);
 
 @property (nonatomic, copy)block myBlock;
 
+@property (nonatomic, assign)NSInteger selectedTitle;
+
 
 
 @end

@@ -27,6 +27,7 @@
 		BBE2B5C81C8E859B009F4C17 /* BLEPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE2B5C71C8E859B009F4C17 /* BLEPhotoCell.m */; };
 		BBE2B5CB1C8E9F5E009F4C17 /* BLENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE2B5CA1C8E9F5E009F4C17 /* BLENavigationController.m */; };
 		BBE467021CB2131A008503B5 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE467011CB2131A008503B5 /* Setting.storyboard */; };
+		BBE467281CB269CF008503B5 /* BLESettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE467271CB269CF008503B5 /* BLESettingController.m */; };
 		BBE4C5091C96F93700EC8F70 /* BLEUnityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE4C5081C96F93700EC8F70 /* BLEUnityModel.m */; };
 		BBE4C50C1C96FCA600EC8F70 /* BLEEntityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE4C50B1C96FCA600EC8F70 /* BLEEntityModel.m */; };
 		BBE4C50F1C96FE0700EC8F70 /* BLENameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE4C50E1C96FE0700EC8F70 /* BLENameModel.m */; };
@@ -121,6 +122,8 @@
 		BBE2B5C91C8E9F5E009F4C17 /* BLENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLENavigationController.h; sourceTree = "<group>"; };
 		BBE2B5CA1C8E9F5E009F4C17 /* BLENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLENavigationController.m; sourceTree = "<group>"; };
 		BBE467011CB2131A008503B5 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		BBE467261CB269CF008503B5 /* BLESettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLESettingController.h; sourceTree = "<group>"; };
+		BBE467271CB269CF008503B5 /* BLESettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLESettingController.m; sourceTree = "<group>"; };
 		BBE4C5071C96F93700EC8F70 /* BLEUnityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEUnityModel.h; sourceTree = "<group>"; };
 		BBE4C5081C96F93700EC8F70 /* BLEUnityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEUnityModel.m; sourceTree = "<group>"; };
 		BBE4C50A1C96FCA600EC8F70 /* BLEEntityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEEntityModel.h; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				BBE0ADE61C8D8981007FD2C2 /* BLEProfileController.m */,
 				BBDF85911C8DD947000052CF /* BLEPhotosController.h */,
 				BBDF85921C8DD947000052CF /* BLEPhotosController.m */,
+				BBE467261CB269CF008503B5 /* BLESettingController.h */,
+				BBE467271CB269CF008503B5 /* BLESettingController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -927,6 +932,7 @@
 				BBEAA7691C9EFDFC00E3A7FA /* BLETitleViewCell.m in Sources */,
 				BBE0ADFA1C8D8A9E007FD2C2 /* BLETabBarController.m in Sources */,
 				BBE203E41C97A6F2009D34A8 /* BLENetworkTool.m in Sources */,
+				BBE467281CB269CF008503B5 /* BLESettingController.m in Sources */,
 				BB10F37C1C92C7F8002297F6 /* BLEBackgroundView.m in Sources */,
 				BBDF85971C8DE78A000052CF /* BLEFileTools.m in Sources */,
 				BBE0ADEB1C8D8981007FD2C2 /* BLEScanController.m in Sources */,

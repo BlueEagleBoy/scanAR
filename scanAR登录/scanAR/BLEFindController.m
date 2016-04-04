@@ -125,7 +125,6 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
     flowLayout.itemSize = CGSizeMake(BLEScreenWidth, BLEScreenHeight);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.minimumLineSpacing = 0;
     self.collectionView.pagingEnabled = YES;
@@ -134,13 +133,13 @@ static NSString * const reuseIdentifier = @"Cell";
 //设置导航栏
 - (void)setupNavigationBar {
     
-    self.tabBarController.navigationItem.titleView = self.titleView;
-    
-    self.tabBarController.navigationController.navigationBarHidden = NO;
-    
+    self.navigationItem.titleView = self.titleView;
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"find_search_button_bg"] style:UIBarButtonItemStyleDone target:self action:@selector(didClickSearchBar)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     
-    self.tabBarController.navigationItem.rightBarButtonItem = rightItem;
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"findAR_type_image_bg"] forBarMetrics:UIBarMetricsDefault];
+
 }
 
 
@@ -189,16 +188,22 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
-
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.titleView.selectedTitle = indexPath.item;
+    NSLog(@"将要显示第%zd个cell",indexPath.item);
+}
 
 - (BOOL)prefersStatusBarHidden {
     return NO;
 }
 
 - (void)dealloc {
-    
+
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
+
+
 
 
 

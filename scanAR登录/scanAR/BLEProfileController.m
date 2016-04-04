@@ -49,6 +49,14 @@
     self.navigationController.navigationBar.hidden = YES;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]init];
+    self.navigationController.navigationItem.titleView = [[UIView alloc]init];
+  
+}
 
 #pragma mark 数据源方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -56,12 +64,10 @@
     return self.dataArray.count;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSArray *cellArray = self.dataArray[section];
     return cellArray.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -83,11 +89,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.section == 0 && indexPath.row == 0 ) {
+        
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        BLEPhotosController *photoVc = [[BLEPhotosController alloc]initWithCollectionViewLayout:layout];
+        
+        [self.navigationController pushViewController:photoVc animated:YES];
+    }
     
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    BLEPhotosController *photoVc = [[BLEPhotosController alloc]initWithCollectionViewLayout:layout];
-    
-    [self.navigationController pushViewController:photoVc animated:YES];
- 
-}
+    if(indexPath.section == 1 && indexPath.row == 1) {
+       
+        UITableViewController *settingVc = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil]instantiateInitialViewController];
+        [self.navigationController pushViewController:settingVc animated:YES];
+        
+    }
+ }
+
 @end

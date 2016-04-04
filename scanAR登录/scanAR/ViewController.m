@@ -16,6 +16,7 @@
 #import "AppDelegate.h"
 #import "BLEViewController.h"
 #import "ExternalEAGLView.h"
+#import "BLETabBarController.h"
 
 
 
@@ -106,26 +107,26 @@
 - (void)setupNavigationBar {
     
     //设置导航栏的背景颜色为透明
-    [self.tabBarController.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
     //设置导航栏的背景图片
-    [self.tabBarController.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     //取消导航栏的阴影
-    self.tabBarController.navigationController.navigationBar.shadowImage = [[UIImage alloc]init];
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc]init];
     //设置导航栏的渲染颜色
-    self.tabBarController.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     //设置返回按钮的图片
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"mainVC_top_backButton_image"] style:UIBarButtonItemStyleDone target:self action:@selector(didClickGoBack)];
-    self.tabBarController.navigationItem.leftBarButtonItem = backItem;
+    self.navigationItem.leftBarButtonItem = backItem;
     
     //设置转换摄像头的图片
     UIButton *transformCamera = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
     [transformCamera setBackgroundImage:[UIImage imageNamed:@"mainVC_change_camare_bg"] forState:UIControlStateNormal];
-    self.tabBarController.navigationItem.titleView = transformCamera;
+    self.navigationItem.titleView = transformCamera;
     
     //设置搜索按钮的图片
     UIBarButtonItem *searchItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"mainVC_search_button_bg"] style:UIBarButtonItemStyleDone target:self action:@selector(didClickSearchItem)];
-    self.tabBarController.navigationItem.rightBarButtonItem = searchItem;
+    self.navigationItem.rightBarButtonItem = searchItem;
     
 }
 
@@ -153,7 +154,11 @@
 
 - (void)didClickGoBack {
     
-    NSLog(@"goback");
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    BLETabBarController *tabBarVc = [[BLETabBarController alloc]init];
+    delegate.window.rootViewController = tabBarVc;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

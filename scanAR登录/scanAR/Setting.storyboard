@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qyp-aj-vae">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IPO-td-UyI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -17,7 +17,7 @@
                             <tableViewSection id="4En-fp-JZp">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gdz-Tx-Ck8">
-                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gdz-Tx-Ck8" id="13m-Be-PwN">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -57,7 +57,7 @@
                             <tableViewSection id="YV0-Cx-dFq">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SZi-4I-oPQ">
-                                        <rect key="frame" x="0.0" y="159" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="95" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SZi-4I-oPQ" id="Tjq-fP-tJP">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -90,7 +90,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7Bv-IT-WsB">
-                                        <rect key="frame" x="0.0" y="203" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="139" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Bv-IT-WsB" id="0eL-p1-rCk">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -119,7 +119,7 @@
                             <tableViewSection id="qwp-Hh-aAV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GNd-X3-Wn7">
-                                        <rect key="frame" x="0.0" y="263" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="199" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GNd-X3-Wn7" id="AZH-43-hD4">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -152,7 +152,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8HR-ss-wG6">
-                                        <rect key="frame" x="0.0" y="307" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="243" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8HR-ss-wG6" id="38d-ob-7d2">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -197,7 +197,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFQ-mf-pUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1195" y="287"/>
+            <point key="canvasLocation" x="2007" y="287"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HNA-Nh-tQV">
@@ -211,7 +211,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="您的反馈内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-Ma-xYA">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="您的反馈内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-Ma-xYA">
                                 <rect key="frame" x="8" y="72" width="584" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -221,7 +221,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="邮箱或者QQ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82q-fg-W5O">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="邮箱或者QQ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82q-fg-W5O">
                                 <rect key="frame" x="8" y="384" width="584" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -240,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJx-JQ-2j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="660"/>
+            <point key="canvasLocation" x="2739" y="660"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Qj3-fz-w7n">
@@ -254,7 +254,7 @@
                             <tableViewSection id="JYm-3e-kyg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lCs-Gp-apL">
-                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lCs-Gp-apL" id="XcY-EB-J3V">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -274,7 +274,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Dl9-t2-Vlj">
-                                        <rect key="frame" x="0.0" y="143" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dl9-t2-Vlj" id="aaV-fI-tIC">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -294,7 +294,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GwZ-bX-PTt">
-                                        <rect key="frame" x="0.0" y="187" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GwZ-bX-PTt" id="4Lw-YU-3TB">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -333,25 +333,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEV-0j-nk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="-47"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="q5D-CP-5ou">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qyp-aj-vae" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UQv-RE-rHU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="IPO-td-UyI" kind="relationship" relationship="rootViewController" id="apY-GZ-iuh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kZU-36-Nzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="483" y="287"/>
+            <point key="canvasLocation" x="2739" y="-47"/>
         </scene>
     </scenes>
     <resources>

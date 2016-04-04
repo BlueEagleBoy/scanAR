@@ -29,6 +29,18 @@
     [self reloadData];
 }
 
+- (void)setSelectedTitle:(NSInteger)selectedTitle {
+    
+    _selectedTitle = selectedTitle;
+    self.lastSelectedCell.isSelected = NO;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:selectedTitle inSection:0];
+    BLETitleViewCell *cell = (BLETitleViewCell *)[self cellForItemAtIndexPath:indexPath];
+    
+    self.lastIndexPath = indexPath;
+    self.lastSelectedCell = cell;
+    cell.isSelected = YES;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
     
     if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
@@ -39,7 +51,6 @@
         self.dataSource = self;
         self.delegate = self;
         [self registerClass:[BLETitleViewCell class] forCellWithReuseIdentifier:BLECellId];
-        
     }
     
     return self;
